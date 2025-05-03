@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Product Page - Fake Shop</title>
+    <link rel="stylesheet" href="../styles/product.css" />
+</head>
+<body>
+<header>
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; position: relative;">
+        <h1 style="color: #5b4ce8;">Fake Shop</h1>
+        <button class="hamburger" id="menu-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav id="nav-menu">
+            <a href="index.html">Головна</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="order.html">Замовлення</a>
+        </nav>
+    </div>
+</header>
+<main class="container">
+    <section id="product-details" class="container">
+        <div class="product-gallery">
+
+            <img id="main-image" src="" alt="Product Image">
+            <div id="thumbnails" class="thumbnail-list"></div>
+        </div>
+        <div class="product-info">
+            <h2 id="product-title"></h2>
+            <p id="product-description"></p>
+            <p id="product-price"></p>
+            <button id="add-to-cart" class="modal-add" aria-label="Add product to cart">Додати в кошик</button>
+            <a href="catalog.html" class="back-button">Назад</a>
+        </div>
+    </section>
+    <div id="toast" class="toast"></div>
+</main>
+<footer>
+    <p>© 2025 Fake Shop. Усі права захищено.</p>
+</footer>
+<script src="../scripts/product.js"></script>
+</body>
+</html>

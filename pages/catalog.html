@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../styles/catalog.css">
+    <title>Document</title>
+</head>
+<body>
+<header>
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; position: relative;">
+        <h1 style="color: #4f46e5;">Fake Shop</h1>
+
+
+        <!-- всередині .container -->
+        <button class="hamburger" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+
+        <nav id="nav-menu">
+            <a href="index.html">Головна</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="order.html" id="open-cart">Замовлення</a>
+        </nav>
+    </div>
+</header>
+<div class="search-sort">
+    <input type="text" id="searchInput" placeholder="Пошук..." />
+    <select id="sortSelect">
+        <option value="default">Сортувати за</option>
+        <option value="price-low">Ціна ↑</option>
+        <option value="price-high">Ціна ↓</option>
+        <option value="rating">Рейтинг</option>
+    </select>
+    <select id="categoryFilter">
+        <option value="all">Усі категорії</option>
+    </select>
+
+</div>
+
+
+
+</div>
+<div id="productModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span id="modal-close" class="modal-close">&times;</span>
+        <img src="" class="modal-image" alt="Product image" />
+        <h2 class="modal-title"></h2>
+        <p class="modal-desc"></p>
+        <p class="modal-price"></p>
+        <button class="modal-add">Додати в кошик</button>
+    </div>
+</div>
+<div id="cartModal" class="cart-sidebar">
+    <div class="cart-header">
+        <h2>Кошик</h2>
+        <button id="cart-close" class="close-btn">×</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <hr>
+    <p id="cartTotal" class="cart-total"></p>
+    <button id="checkoutBtn" class="checkout-btn">Замовити</button>
+</div>
+
+<section class="product-grid" id="productGrid"></section>
+<div class="pagination" id="pagination"></div>
+<button id="openCartBtn" style="position: fixed; bottom: 20px; right: 20px; background: #4f46e5; color: white; border: none; border-radius: 50%; width: 60px; height: 60px; font-size: 24px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); cursor: pointer;">🛒</button>
+<footer>
+    <p>© 2025 Fake store. Усі права захищено.</p>
+</footer>
+
+
+<script src="../scripts/catalog.js"></script>
+</body>
+</html>

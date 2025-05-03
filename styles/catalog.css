@@ -1,0 +1,512 @@
+/* Базові стилі */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: white;
+    color: #2d3748;
+}
+
+/* HEADER */
+header {
+    position: sticky;
+    top: 0;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 50;
+    padding: 8px 0;
+}
+header .container {
+    padding: 8px 16px;
+}
+header h1 {
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+/* NAVIGATION */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+nav a {
+    font-weight: 500;
+    text-decoration: none;
+    color: inherit;
+}
+nav a:hover {
+    color: #4f46e5;
+}
+
+/* HERO */
+.hero {
+    background-color: #e0e7ff;
+    text-align: center;
+    padding: 80px 16px;
+}
+.hero h2 {
+    font-size: 2.5rem;
+    color: #3730a3;
+    margin-bottom: 16px;
+}
+
+/* INFO SECTION */
+.info-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 64px 16px;
+}
+@media(min-width: 768px) {
+    .info-section {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.info-section img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* FAQ SECTION */
+.faq-section {
+    background-color: #f9fafb;
+    padding: 64px 16px;
+}
+.faq {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.faq button {
+    width: 100%;
+    padding: 16px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: left;
+    cursor: pointer;
+}
+.faq button:hover {
+    background-color: #f3f4f6;
+}
+.faq div.answer {
+    padding: 16px;
+    display: none;
+    background-color: white;
+    color: #4b5563;
+    border: 1px solid #e5e7eb;
+    border-top: none;
+}
+
+/* SEARCH + SORT */
+.search-sort {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 16px;
+}
+@media(min-width: 768px) {
+    .search-sort {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+/* INPUTS */
+input, select {
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 1rem;
+}
+
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: white;
+    border: 2px solid #4f46e5; /* яскрава синя рамка */
+    border-radius: 8px;
+    padding: 10px 40px 10px 14px;
+    font-size: 1rem;
+    color: #111827;
+    background-image: url("data:image/svg+xml,%3Csvg fill='none' stroke='%234f46e5' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+select:hover {
+    background-color: #f3f4f6;
+}
+select:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.3);
+}
+
+
+/* PRODUCT GRID */
+.product-grid {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+}
+@media (max-width: 768px) {
+    .product-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* PRODUCT CARD */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    max-width: 300px;
+    height: 100%;
+}
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    background: #f9f9f9;
+}
+.product-card .info {
+    padding: 16px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.product-card .info h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.product-card .info p {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+.card-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+}
+.card-actions button {
+    flex: 1;
+    padding: 8px;
+    border-radius: 6px;
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+.card-actions button:hover {
+    background-color: #4338ca;
+}
+
+/* CART STYLES */
+/* CART MODAL - випливання справа */
+#cartModal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 360px;
+    max-width: 100%;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.2);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    padding: 1.5rem;
+    overflow-y: auto;
+}
+
+/* Коли кошик активний — показуємо */
+#cartModal.active {
+    transform: translateX(0);
+}
+
+/* Кнопка закриття */
+#cart-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Стилі для item у кошику */
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
+}
+
+.cart-thumb {
+    width: 60px;
+    height: auto;
+    object-fit: contain;
+}
+
+.cart-details {
+    flex: 1;
+    font-size: 14px;
+}
+
+.qty-btn {
+    margin: 0 4px;
+    padding: 2px 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.remove-btn {
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#cartTotal {
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+#checkoutBtn {
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.qty-btn {
+    padding: 4px 10px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 6px;
+    background-color: #4c60af;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.qty-btn:hover {
+    background-color: #45a049;
+}
+
+
+
+
+
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 24px;
+    background-color: #f3f4f6;
+    color: #6b7280;
+}
+
+/* MODAL */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(3px);
+}
+.modal-content {
+    background: #ffffff;
+    color: #2d3748;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 90%;
+    padding: 32px;
+    position: relative;
+    text-align: left;
+    animation: fadeIn 0.3s ease-in-out;
+}
+.modal-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    background-color: #f9fafb;
+    padding: 16px;
+}
+.modal-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+.modal-desc {
+    font-size: 1rem;
+    margin-bottom: 16px;
+    color: #4b5563;
+}
+.modal-price {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #4f46e5;
+}
+.modal-add {
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.modal-add:hover {
+    background-color: #4338ca;
+}
+.modal-close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #9ca3af;
+    transition: color 0.2s ease;
+}
+.modal-close:hover {
+    color: #4f46e5;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ✅ ГАРНЕ ГАМБУРГЕР МЕНЮ */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 6px;
+    padding: 8px;
+    z-index: 1100;
+}
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #4f46e5;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        padding: 10px 0;
+    }
+}
+
+
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.pagination button {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pagination button:hover {
+    background-color: #4338ca;
+}
+
+.pagination button.active {
+    background-color: #4338ca;
+    cursor: default;
+}
+
+.pagination button:disabled {
+    background-color: #d1d5db;
+    cursor: not-allowed;
+}

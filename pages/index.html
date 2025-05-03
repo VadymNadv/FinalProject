@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fake Shop</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../styles/style.css" >
+</head>
+<body>
+<header>
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; position: relative;">
+        <h1 style="color: #4f46e5;">Fake Shop</h1>
+        <button class="hamburger" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav id="nav-menu">
+            <a href="index.html">Головна</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="order.html">Замовлення</a>
+        </nav>
+    </div>
+</header>
+<section class="hero">
+    <h2>Знайдіть найкращі продукти тут</h2>
+    <p>Отримуйте ексклюзивні пропозиції щодня</p>
+    <a href="catalog.html" class="hero-btn">Перейти до каталогу</a>
+
+</section>
+<section class="info-section container">
+    <div style=" align-items: center;">
+        <h3 style="font-size: 3rem; margin-bottom: 1rem;">Чому обирають нас?</h3>
+        <p style="margin-bottom: 1rem;">Ми пропонуємо найкращі ціни, зручну доставку та безпечні платежі.</p>
+        <ul style="color: #4b5563; gap: 1rem;">
+            <li><img src="../img_svg/check.svg" alt="" style="width: 30px; height: 30px;vertical-align: middle; margin-right: 10px " > Безкоштовна доставка від 500₴</li>
+            <li><img src="../img_svg/check.svg" alt="" style="width: 30px; height: 30px; vertical-align: middle; margin-right: 10px"> Гарантія якості</li>
+            <li><img src="../img_svg/check.svg" alt="" style="width: 30px; height: 30px; vertical-align: middle; margin-right: 10px"> Повернення протягом 14 днів</li>
+        </ul>
+    </div>
+    <div>
+        <img src="../img_svg/8629-%5BConverted%5D.png" alt="Why choose us">
+    </div>
+</section>
+<section class="page-scroll">
+    <div class="content">
+        <h2>Потужні інструменти</h2>
+        <p>Виберіть одну з можливостей нижче, щоб дізнатися більше:</p>
+        <div class="cards">
+            <div class="card active" onclick="changeImage(0)">
+                <h3>Зручна оплата</h3>
+                <p>Оплачуйте як вам зручно – карткою, Google Pay чи при отриманні.</p>
+            </div>
+            <div class="card" onclick="changeImage(1)">
+                <h3>Швидка доставка</h3>
+                <p>Ми доставляємо замовлення по всій Україні за 1-3 дні.</p>
+            </div>
+            <div class="card" onclick="changeImage(2)">
+                <h3>Гарантія повернення</h3>
+                <p>Повернення протягом 14 днів без зайвих питань.</p>
+            </div>
+        </div>
+    </div>
+    <div class="image-wrapper">
+        <img src="../img_svg/illustration1-mvQYH-I0.svg" alt="Оплата" class="active">
+        <img src="../img_svg/illustration2-1b2WZaOp.svg" alt="Доставка">
+        <img src="../img_svg/illustration3-Td6aLZcD.svg" alt="Повернення">
+    </div>
+</section>
+
+<section class="swiper-section">
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="../img_svg/IMG1.jpg" /></div>
+            <div class="swiper-slide"><img src="../img_svg/IMG3.jpg" /></div>
+            <div class="swiper-slide"><img src="../img_svg/IMG2.jpg" /></div>
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+
+<section class="faq-section">
+    <div class="faq">
+        <h3>Часті запитання</h3>
+        <div class="faq-item">
+            <button class="faq-question">Як оформити замовлення?</button>
+            <div class="answer">Просто додайте товар до кошика, натисніть "Оформити" і заповніть форму.</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Які способи оплати?</button>
+            <div class="answer">Ми приймаємо карти Visa, Mastercard, Google Pay, Apple Pay.</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Чи можна повернути товар?</button>
+            <div class="answer">Так, протягом 14 днів згідно з законом України про захист прав споживачів.</div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Fake store. Усі права захищено.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="../scripts/script.js"></script>
+</body>
+</html>
